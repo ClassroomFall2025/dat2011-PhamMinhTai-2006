@@ -22,3 +22,28 @@ def tinh_nguyen_lieu(sl_bdx, sl_btc, sl_bd):
     nguyen_lieu["Đường"] = duong_hop_banh
     nguyen_lieu["Đậu"] = dau_hop_banh
     return nguyen_lieu
+
+#tính số nguyên dương chia hết cho 2 trong 1 dãy số tự nhập
+def so_chia_het_cho_2():
+    my_list = []
+
+    print("Nhập dãy số nguyên (nhập 's' Hoặc 'S' để kết thúc):")
+    while True:
+        so = input("Nhập số: ")
+
+        # Người dùng muốn dừng
+        if so.lower() in ["s"] or so.upper() in ["S"]:
+            break
+
+        # Kiểm tra dữ liệu hợp lệ
+        try:
+            so_nguyen = int(so)
+            my_list.append(so_nguyen)
+            print('số bạn vừa nhập là:', my_list)
+        except ValueError:
+            print("Vui lòng nhập số nguyên hợp lệ!")
+
+    # Lọc các số chia hết cho 2 bằng filter + lambda
+    new_list = list(filter(lambda x: x % 2 == 0, my_list))
+    return new_list
+
