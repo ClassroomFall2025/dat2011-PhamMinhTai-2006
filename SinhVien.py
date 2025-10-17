@@ -45,9 +45,9 @@ class SinhVienIT(SinhVienPoly):
     
     def nhap_tt(self):
         super().nhap_tt()
-        self.java=int(input("điểm java:"))
-        self.html=int(input("điểm html:"))
-        self.css=int(input("điểm css:"))
+        self.java=int(input("Nhập điểm java:"))
+        self.html=int(input("Nhập điểm html:"))
+        self.css=int(input("Nhập điểm css:"))
 
     def get_diem(self):
         return (self.java*2 + self.html + self.css)/4 
