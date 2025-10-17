@@ -24,7 +24,7 @@ class SP:
             self.__giam_gia=giam_gia
         else:
             print("giảm giá không hợp lệ")
-            
+
     def Thue_NK(self):
         return self.__gia_ban*0.1
     
